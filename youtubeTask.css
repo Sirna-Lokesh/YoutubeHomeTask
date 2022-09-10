@@ -1,0 +1,191 @@
+        #playButton1, #playButton2, #playButton3, #playButton4, #playButton5
+        {
+                width: 50%;
+                text-align: center;
+                font-size: large;
+                background-color: red;
+                color: white;
+                margin-left: auto;
+        }
+        header
+        {
+            background-color: #202020;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+        .listOfImages
+         {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            grid-gap: 5px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .infoAboutVideo
+        {
+            text-align: center;
+        }
+        .pagination-btn
+        {
+            background-color: rgb(67, 174, 67);
+            width: 115px;
+            height: 50px;
+            color: white;
+            font-size: large;
+            border-radius: 15px;
+            
+        }
+        .pagination
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: red;; */
+            height: 100px;
+        }
+        .Navigation-buttons
+        {
+           font-size: large;
+           background-color: rgb(23, 43, 217);
+           color: white;
+           height: 50px;
+           width: 160px;
+           border-radius: 5px;
+           position: sticky;
+        }
+        .hide
+        {
+            visibility: hidden;
+        }
+        .logo
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            justify-self: flex-start;
+        }
+        aside
+        {
+            justify-self: flex-end;
+        }
+        
+        #sbutton
+        {
+            width: 100px;
+            height: 43px;;
+            font-size: large;
+            border-radius: 10px;
+            
+        }
+        
+        .currentStatusOfPages
+        {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            
+            margin-top: 10px;
+        }
+        #CurrentPageNumber
+        {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px rgb(14, 13, 13), 0 0 5px rgb(224, 61, 61);
+        }
+        #search
+        {
+            font-size: large;
+            height: 40px;
+            width: 50%;
+            border-radius: 10px;
+            transition: width 2s;
+        }
+        .playButtondiv
+        {
+            margin: auto;
+            width: 100%;
+        }
+        #playButton5,#playButton4,#playButton3,#playButton2,#playButton1
+        {
+            margin: auto;
+            width: 100%;
+        }
+        #playButton5:hover,#playButton4:hover,#playButton3:hover,#playButton2:hover,#playButton1:hover
+        {
+           border-radius: 10px;
+           background-color: rgb(196, 69, 69);
+           color: white;
+        }
+        .imageContainer
+            {
+                height: 100%;
+                display: grid;
+                justify-content: center;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            
+
+        /* break point 1 */
+        @media screen and (max-width: 800px) {
+            /* body {
+              background-color: lightgreen;
+            } */
+            .listOfImages
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                background-color:#f4f4f4;
+                margin-top: 40px;
+            }
+            .imageContainer
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                background-color: red;
+            }
+          }
+          #thumbnail1,#thumbnail2,#thumbnail3,#thumbnail4,#thumbnail5
+          {
+            align-self: flex-start;
+          }
+          .pagination-btn:hover
+          {
+             background-color: rgb(181, 245, 181,0.5);
+             color: black;
+             box-shadow: 2px 2px 3px 3px rgb(239, 71, 71);
+          }
+          .Navigation-buttons:hover
+          {
+            background-color: rgb(104, 184, 234);
+            box-shadow: 2px 2px 3px 3px rgb(239, 71, 71);
+          }
+          /* break point 2 */
+          @media screen and (max-width: 500px) {
+            /* body {
+              background-color: rgb(238, 144, 160);
+            } */
+            .listOfImages
+            {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                align-items: center;
+                background-color:#f4f4f4;
+                margin-top: 40px;
+            }
+            .imageContainer
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+          }
