@@ -148,8 +148,11 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                
-                background-color: red;
+            }
+            .Navigation-buttons
+            {
+                width: 15%;
+                overflow: hidden;
             }
           }
           #thumbnail1,#thumbnail2,#thumbnail3,#thumbnail4,#thumbnail5
