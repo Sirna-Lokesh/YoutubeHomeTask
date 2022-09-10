@@ -15,7 +15,7 @@ searchButton.addEventListener("click",()=>{
             {
                 document.getElementById("thumbnail"+i).src=details[i].snippet.thumbnails.medium.url;
                 document.getElementById("description"+i).innerText=details[i].snippet.description.substring(0,50);
-                document.getElementById("channel"+i).innerText=details[i].snippet.channelTitle;
+                document.getElementById("channel"+i).innerText=details[i].snippet.channelTitle.substring(0,20);
                 document.getElementById("publishDate"+i).innerText=details[index].snippet.publishTime.substring(0,10);
                 document.getElementById("thumbnail"+i).setAttribute("onclick", "window.open('https://www.youtube.com/watch?v=" + details[index].id.videoId + "')");
                 document.getElementById("playButton"+i).setAttribute("onclick","window.open('https://www.youtube.com/watch?v=" + details[index].id.videoId + "')");
@@ -80,13 +80,15 @@ searchButton.addEventListener("click",()=>{
                 let PageButtonsCollection=document.getElementsByClassName("pagination-btn");
                 let ArrayOfPageButtons=Array.from(PageButtonsCollection);
                 
-                
+                if(Number(ArrayOfPageButtons[0].innerText)>5)
+                       {
+                        pageCount-=5;
+                       }
                 for(let element of ArrayOfPageButtons)
                 {
                     let previousInnerText=element.innerText;
                     if(Number(previousInnerText)>5)
                     {
-                        pageCount-=5;
                         element.innerText=Number(previousInnerText)-5;
                     }
                         
