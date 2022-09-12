@@ -4,15 +4,27 @@ let details;
 let searchButton = document.querySelector("#sbutton");
 
 var index = 0;
+async function getStats(videoID1,videoID2,videoID3,videoID4,videoID5)
+{
+    
+    let link=`https://www.googleapis.com/youtube/v3/videos?key=AIzaSyDZp_COq8hBzXEJdHDXS0bGfzzG3dkGT8c&id=${videoID1},${videoID2},${videoID3},${videoID4},${videoID5},REu2BcnlD34,qbPTdW7KgOg&part=snippet,statistics`;
+    return fetch(link).then((res) => {
+        return res.json();
+    }).then((res)=>{return res.items;})
+    .catch(() => alert("Error in Fetching stats,Check Again"));
 
+}
 function getVideos() {
     fetchSearchResults().then((res) => {
         details = res.items;
         console.log(details);
         document.getElementById("CurrentPageNumber").classList.remove("hide");
         document.getElementById("pagination").classList.remove("hide");
-
+        let videoIDArray=new Array();
         for (let i = 1; i <= 5; i++) {
+            videoIDArray.push(details[i].id.videoId);
+            document.getElementById("viewscount1").innerText="Views:";
+            
             document.getElementById("thumbnail" + i).src = details[i].snippet.thumbnails.medium.url;
             document.getElementById("description" + i).innerText = details[i].snippet.description.substring(0, 50);
             document.getElementById("channel" + i).innerText = details[i].snippet.channelTitle.substring(0, 20);
@@ -20,15 +32,24 @@ function getVideos() {
             document.getElementById("thumbnail" + i).setAttribute("onclick", "window.open('https://www.youtube.com/watch?v=" + details[index].id.videoId + "')");
             document.getElementById("playButton" + i).setAttribute("onclick", "window.open('https://www.youtube.com/watch?v=" + details[index].id.videoId + "')");
         }
+        getStats(...videoIDArray).then((items)=>{
+            console.log(items);
+            for(let i=1;i<=5;i++)
+            {
+                document.getElementById("viewscount"+i).innerText="Views:"+items[i].statistics.viewCount;
+            }
+           
+        })
         document.getElementById("listOfImages").classList.remove("hide");
         var pageCount = 0;
-        var currentPage = 1;
+        var currentPage = 1; 
         function changeVideosByPagination(val) {
             let index = val * 5;
             currentPage = val;
             let previousPageNumber = document.getElementById("CurrentPageNumber").innerText = "You are Currently Viewing Page: " + Number(pageCount + currentPage);
+            let videoIDArray=new Array();
             for (let i = 1; i <= 5; i++) {
-
+                videoIDArray.push(details[index].id.videoId);
                 document.getElementById("thumbnail" + i).src = details[index].snippet.thumbnails.medium.url;
                 document.getElementById("description" + i).innerText = "DESCRIPTION : " + details[index].snippet.description.substring(0, 50);
                 document.getElementById("channel" + i).innerText = "Channel :" + details[index].snippet.channelTitle;
@@ -36,6 +57,15 @@ function getVideos() {
                 document.getElementById("thumbnail" + i).setAttribute("onclick", "window.open('https://www.youtube.com/watch?v=" + details[index].id.videoId + "')");
                 index += 1;
             }
+            getStats(...videoIDArray).then((items)=>{
+                console.log(items);
+                for(let i=1;i<=5;i++)
+                {
+                    document.getElementById("viewscount"+i).innerText="Views:"+items[i].statistics.viewCount;
+                }
+               
+            })
+
         }
         document.getElementById("pagination-btn1").addEventListener("click", () => {
 
