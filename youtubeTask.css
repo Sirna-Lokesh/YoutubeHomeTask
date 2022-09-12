@@ -128,8 +128,9 @@
         #playButton5:hover,#playButton4:hover,#playButton3:hover,#playButton2:hover,#playButton1:hover
         {
            border-radius: 10px;
-           background-color: rgb(196, 69, 69);
+           background-color: rgb(241, 16, 16);
            color: white;
+           box-shadow: 1px 1px 1px 1px white
         }
         .imageContainer
             {
@@ -147,30 +148,29 @@
           .pagination-btn:hover
           {
              background-color: rgb(181, 245, 181,0.5);
-             color: black;
-             box-shadow: 2px 2px 3px 3px rgb(239, 71, 71);
+             color:white;
+             box-shadow: 1px 1px 1px 1px white
           }
           .Navigation-buttons:hover
           {
-            background-color: rgb(104, 184, 234);
-            box-shadow: 2px 2px 3px 3px rgb(239, 71, 71);
+            background-color: rgb(31, 154, 231);
+            box-shadow: 1px 1px 1px 1px white;
           }
           .pagination
           {
-             border: rgb(228, 104, 104,0.55);
+             border: rgb(228, 104, 104,0,5);
           }
         /* break point 1 */
         @media screen and (max-width: 800px) {
-            /* body {
-              background-color: lightgreen;
-            } */
+            body {
+              background-color: black;
+            }
             .listOfImages
             {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 justify-content: center;
                 align-items: center;
-                background-color:#f4f4f4;
                 margin-top: 40px;
             }
             .imageContainer
@@ -204,7 +204,6 @@
                 grid-template-columns: 1fr;
                 justify-content: center;
                 align-items: center;
-                background-color:#f4f4f4;
                 margin-top: 40px;
             }
             .imageContainer

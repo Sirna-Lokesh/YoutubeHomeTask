@@ -105,7 +105,7 @@ function fetchSearchResults(){
     let link=`https://www.googleapis.com/youtube/v3/search?key=AIzaSyDZp_COq8hBzXEJdHDXS0bGfzzG3dkGT8c&type=video&part=snippet&maxResults=${maxResults}&q=${value}`;
     
     return fetch(link).then((res)=>{
-        return res.json()
+        return res.json();
     }).catch(()=>alert("Error in Fetching Results,Check Again"));
 }
 
