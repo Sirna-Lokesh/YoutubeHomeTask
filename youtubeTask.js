@@ -1,7 +1,7 @@
 
 let maxResults = 100;
 let details;
-let searchButton = document.querySelector("#sbutton");
+let searchButton = document.querySelector("#searchButton");
 
 var index = 0;
 async function getStats(videoID1,videoID2,videoID3,videoID4,videoID5)

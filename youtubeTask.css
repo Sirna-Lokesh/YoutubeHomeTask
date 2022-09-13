@@ -42,12 +42,12 @@
         }
         .pagination-btn
         {
-            background-color: rgb(67, 174, 67);
+            background-color: rgb(59, 186, 197);
             width: 115px;
             height: 50px;
             color: white;
             font-size: large;
-            border-radius: 15px;
+           
             
         }
         .pagination
@@ -61,7 +61,7 @@
         .Navigation-buttons
         {
            font-size: large;
-           background-color: rgb(23, 43, 217);
+           background-color: rgb(31, 154, 231);
            color: white;
            height: 50px;
            width: 160px;
@@ -89,15 +89,14 @@
             justify-self: flex-end;
         }
         
-        #sbutton
+        #searchButton
         {
             width: 100px;
-            height: 43px;;
+            height: 100%;
             font-size: large;
-            border-radius: 10px;
-            
+            margin-left: 2px;
+            padding: 2px;
         }
-        
         .currentStatusOfPages
         {
             
@@ -114,10 +113,9 @@
         #search
         {
             font-size: large;
-            height: 40px;
-            width: 50%;
-            border-radius: 10px;
-            transition: width 2s;
+            width: 60%;
+            height: 1.7rem;
+
         }
         .playButtondiv
         {
@@ -151,7 +149,7 @@
           }
           .pagination-btn:hover
           {
-             background-color: rgb(181, 245, 181,0.5);
+             background-color: rgb(59, 186, 197);
              color:white;
              box-shadow: 1px 1px 1px 1px white
           }
