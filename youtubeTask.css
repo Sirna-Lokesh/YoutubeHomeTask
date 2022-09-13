@@ -163,7 +163,7 @@
              border: rgb(228, 104, 104,0,5);
           }
         /* break point 1 */
-        @media screen and (max-width: 800px) {
+        @media screen and (max-width: 850px) {
             body {
               background-color: black;
             }
@@ -191,6 +191,11 @@
             #imageContainer3,#imageContainer4,#imageContainer5
             {
                 display: none;
+            }
+            #searchButton
+            {
+                height: 35px;
+             
             }
           }
           
@@ -223,5 +228,10 @@
             #imageContainer2,#imageContainer3,#imageContainer4,#imageContainer5
             {
                 display: none;
+            }
+            #searchButton
+            {
+                height: 35px;
+                width: 100px;
             }
           }
