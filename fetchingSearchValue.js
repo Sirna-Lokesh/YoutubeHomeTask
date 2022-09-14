@@ -1,11 +1,9 @@
 function getSearchValue() {
     var value = "";
-    if(document.querySelector("#search"))
-    {
+    if(document.querySelector("#search")){
         value=document.querySelector("#search").value
     }
-    else
-    {
+    else{
         value="java";
     }
     return value; 
