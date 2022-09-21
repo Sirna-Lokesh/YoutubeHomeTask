@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="youtubeTask.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="logo" height="50px" width="100px"> 
+        </div>
+        <aside>
+            <input type="text" id="search" autocomplete="off" placeholder="search">
+            <button id="searchButton">Search</button>
+        </aside>
+    </header>
+    <section>
+        <div id="listOfImages" class="listOfImages hide ">
+                <div class="imageContainer" id="imageContainer1">
+                    <div class="imageHolder">
+                        <img src="" alt="" height="200px" width="100%" id="thumbnail1">
+                    </div>
+                    <div class="infoAboutVideo">
+                        <p id="description1"></p>
+                        <h3 id="channel1"></h3>
+                        <h3 id="publishDate1"></h3>
+                        <h3 id="viewscount1" class="viewcount"></h3>
+                    </div>
+                    <div class="playButtondiv" >
+                        <button id="playButton1">Play Video</button>
+                    </div>
+                </div>
+
+                <div class="imageContainer" id="imageContainer2">
+                    <div class="imageHolder">
+                        <img src="" alt="" height="200px" width="100%" id="thumbnail2">
+                    </div>
+                    
+                    <div class="infoAboutVideo">
+                        <p id="description2"></p>
+                        <h3 id="channel2"></h3>
+                        <h3 id="publishDate2"></h3>
+                        <h3 id="viewscount2" class="viewcount"></h3>
+                    </div>
+                    <div class="playButtondiv" >
+                        <button  id="playButton2">Play Video</button>
+                    </div>
+                   
+                </div>
+                <div class="imageContainer" id="imageContainer3">
+                    <div class="imageHolder">
+                        <img src="" alt="" height="200px" width="100%" id="thumbnail3">
+                    </div>
+                    <div class="infoAboutVideo">
+                        <p id="description3"></p>
+                        <h3 id="channel3"></h3>
+                        <h3 id="publishDate3"></h3>
+                        <h3 id="viewscount3" class="viewcount"></h3>
+                    </div>
+                    <div class="playButtondiv" >
+                        <button  id="playButton3">Play Video</button>
+                    </div>
+                </div>
+                <div class="imageContainer" id="imageContainer4">
+                    <div class="imageHolder">
+                        <img src="" alt="" height="200px" width="100%" id="thumbnail4">
+                    </div>
+                    
+                    <div class="infoAboutVideo">
+                        <p id="description4"></p>
+                        <h3 id="channel4"></h3>
+                        <h3 id="publishDate4"></h3>
+                        <h3 id="viewscount4" class="viewcount"></h3>
+                    </div>
+                    <div class="playButtondiv" >
+                        <button  id="playButton4">Play Video</button>
+                    </div>
+                </div>
+                <div class="imageContainer" id="imageContainer5">
+                    <div class="imageHolder">
+                        <img src="" alt="" height="200px" width="100%" id="thumbnail5">
+                    </div>
+                    <div class="infoAboutVideo">
+                        <p id="description5"></p>
+                        <h3 id="channel5"></h3>
+                        <h3 id="publishDate5"></h3>
+                        <h3 id="viewscount5" class="viewcount"></h3>
+                    </div>
+                    <div class="playButtondiv" >
+                        <button  id="playButton5">Play Video</button>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <div class="currentStatusOfPages">
+        <h1 id="CurrentPageNumber" class="hide">You are Currently Viewing Page :1</h1>
+    </div>
+    <footer>
+        <div class="pagination hide" id="pagination">
+            <button class="Navigation-buttons" id="pagination-btnPrevious">Previous</button>
+            <button class="pagination-btn" id="pagination-btn1">1</button>
+            <button class="pagination-btn" id="pagination-btn2">2</button>
+            <button class="pagination-btn" id="pagination-btn3">3</button>
+            <button class="pagination-btn" id="pagination-btn4">4</button>
+            <button class="pagination-btn" id="pagination-btn5">5</button>
+            <button class="Navigation-buttons" id="pagination-btnNext">Next</button>
+        </div>
+    </footer>
+    <script src="youtubeTask.js"></script>
+    <script src="addingEventListeners.js"></script>
+    <script src="callingApi.js"></script>
+    <script src="fetchingSearchValue.js"></script>
+    <script src="gettingViews.js"></script>
+    <script src="pagination.js"></script>
+    <script src="dataForFirstPage.js"></script>
+    <script src="makeVideosVisible.js"></script>
+    <script src="generateApiLink.js"></script>
+    
+</body>
+</html>

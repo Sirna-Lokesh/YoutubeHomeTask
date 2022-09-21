@@ -1,0 +1,237 @@
+        #playButton1, #playButton2, #playButton3, #playButton4, #playButton5
+        {
+                width: 50%;
+                text-align: center;
+                font-size: large;
+                background-color: red;
+                color: white;
+                margin-left: auto;
+        }
+        header
+        {
+            background-color: #202020;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+        section
+        {
+            background-color: black;
+        }
+        body
+        {
+            background-color: black;
+        }
+        footer
+        {
+            background-color: black;
+        }
+        .listOfImages
+         {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            grid-gap: 5px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .infoAboutVideo
+        {
+            text-align: center;
+            color: white;
+        }
+        .pagination-btn
+        {
+            background-color: rgb(59, 186, 197);
+            width: 115px;
+            height: 50px;
+            color: white;
+            font-size: large;
+           
+            
+        }
+        .pagination
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: red;; */
+            height: 100px;
+        }
+        .Navigation-buttons
+        {
+           font-size: large;
+           background-color: rgb(31, 154, 231);
+           color: white;
+           height: 50px;
+           width: 160px;
+           border-radius: 5px;
+           position: sticky;
+        }
+        .hide
+        {
+            visibility: hidden;
+        }
+        .logo
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80px;
+            justify-self: flex-start;
+        }
+        .removeDisplay
+        {
+            display: none;
+        }
+        aside
+        {
+            justify-self: flex-end;
+        }
+        
+        #searchButton
+        {
+            width: 100px;
+            height: 100%;
+            font-size: large;
+            margin-left: 2px;
+            padding: 2px;
+        }
+        .currentStatusOfPages
+        {
+            
+            display: flex;
+            justify-content: center;
+            
+            margin-top: 10px;
+        }
+        #CurrentPageNumber
+        {
+            color: white;
+            text-shadow: 1px 1px 2px rgb(231, 43, 43), 0 0 25px rgb(235, 13, 13), 0 0 5px rgb(224, 61, 61);
+        }
+        #search
+        {
+            font-size: large;
+            width: 60%;
+            height: 1.7rem;
+
+        }
+        .playButtondiv
+        {
+            margin: auto;
+            width: 100%;
+        }
+        #playButton5,#playButton4,#playButton3,#playButton2,#playButton1
+        {
+            margin: auto;
+            width: 100%;
+        }
+        #playButton5:hover,#playButton4:hover,#playButton3:hover,#playButton2:hover,#playButton1:hover
+        {
+           border-radius: 10px;
+           background-color: rgb(241, 16, 16);
+           color: white;
+           box-shadow: 1px 1px 1px 1px white
+        }
+        .imageContainer
+            {
+                height: 100%;
+                display: grid;
+                justify-content: center;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+            
+            #thumbnail1,#thumbnail2,#thumbnail3,#thumbnail4,#thumbnail5
+          {
+            align-self: flex-start;
+          }
+          .pagination-btn:hover
+          {
+             background-color: rgb(59, 186, 197);
+             color:white;
+             box-shadow: 1px 1px 1px 1px white
+          }
+          .Navigation-buttons:hover
+          {
+            background-color: rgb(31, 154, 231);
+            box-shadow: 1px 1px 1px 1px white;
+          }
+          .pagination
+          {
+             border: rgb(228, 104, 104,0,5);
+          }
+        /* break point 1 */
+        @media screen and (max-width: 850px) {
+            body {
+              background-color: black;
+            }
+            .listOfImages
+            {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+            }
+            .imageContainer
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 400px;
+            }
+            .Navigation-buttons
+            {
+                width: 15%;
+                overflow: hidden;
+            }
+            #imageContainer3,#imageContainer4,#imageContainer5
+            {
+                display: none;
+            }
+            #searchButton
+            {
+                height: 35px;
+             
+            }
+          }
+          
+          /* break point 2 */
+          @media screen and (max-width: 500px) {
+            /* body {
+              background-color: rgb(238, 144, 160);
+            } */
+            aside
+            {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .listOfImages
+            {
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+            }
+            .imageContainer
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #imageContainer2,#imageContainer3,#imageContainer4,#imageContainer5
+            {
+                display: none;
+            }
+            #searchButton
+            {
+                height: 35px;
+                width: 100px;
+            }
+          }
